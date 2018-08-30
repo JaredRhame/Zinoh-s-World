@@ -11,7 +11,7 @@ function textSequence(i) {
         setTimeout(function() {
             document.getElementById("sequence").innerHTML = loopingTxt[i];
             textSequence(++i);
-        }, 1500); // 1 second (in milliseconds)
+        }, 1000); // 1 second (in milliseconds)
 
     } else if (loopingTxt.length == i) { // Loop
         textSequence(0);
@@ -20,10 +20,10 @@ function textSequence(i) {
 }
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+//window.onscroll = function() {stickyNav()};
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+window.onscroll = function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
     // navbar.classList.remove("not-sticky");

@@ -55,9 +55,8 @@ body{
   text-decoration: none;
 }
 
-#navbar a:hover{
-  border-bottom: 3px solid #e7b99f;
-}
+#navbar a:hover{ border-bottom: 3px solid #e7b99f; }
+
 .active{
 
 }
@@ -69,9 +68,7 @@ body{
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky #main {
-  padding-top: 60px;
-}
+.sticky #main { padding-top: 60px; }
 
 .sections{
   height: 50px;
@@ -88,9 +85,7 @@ body{
   padding: 15px;
 }
 
-#main{
-  margin-top: 600px;
-}
+#main{ margin-top: 600px; }
 
 #portrait{
   background-image: url('/imgs/my-image.jpg');
@@ -103,32 +98,126 @@ body{
   position: absolute;
 }
 
-.row{
-  height: 80vh;
-}
+
 
 #proj-grid{
-  margin-top: 75px;
+  padding-bottom: 75px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
 }
-#proj-grid a{
-  text-decoration: none;
+
+#astronaut{
+  background-image: url('/imgs/under-construction.jpg');
+  border-radius: 150px;
+  margin: 200px auto;
 }
 
 .project-tile{
-  height: 300px;
-  width: 300px;
-  border-radius: 150px;
-  position: relative;
+  height: 520px;
+  width: 520px;
   background-image: url('/imgs/under-construction.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  margin: 0;
 }
 
-.tooltip {
-  position: relative;
+.overlay-top{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
+
+.overlay-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay-left{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.overlay-right{
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+#proj-1:hover .overlay-top{ height: 100%; }
+#proj-3:hover .overlay-left{ width: 100%; }
+#proj-4:hover .overlay-right{
+  width: 100%;
+  left: 0;
+}
+#proj-5:hover .overlay-bottom{ height: 100%; }
+
+#proj-2{
+  height: 250px;
+  width: 251px;
+}
+
+#proj-3{
+  height: 250px;
+  width: 450px;
+  margin: 0;
+}
+
+#proj-4{
+  height: 450px;
+  width: 350px;
+  margin: 0;
+}
+
+#proj-5{
+  height: 550px;
+  width: 250px;
+  margin: 0;
+}
+
+#proj-6{
+  height: 250px;
+  width: 150px;
+  margin: 0;
+}
+
+.alt-tiles{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.grow { transition: all .2s ease-in-out; }
+
+.grow:hover { transform: scale(1.1); }
+
+.tooltip { position: relative; }
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -164,11 +253,4 @@ body{
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
-
-#circle-fix{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
 }
