@@ -2,12 +2,13 @@
   --deep-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   --main-color: #6C7974;
   --highlight-color: #e7b99f;
-  --proj-1-img: url('/imgs/under-construction.jpg');
+  --proj-1-img: url('/imgs/giphy-clone.jpg');
   --proj-2-img: url('/imgs/under-construction.jpg');
   --proj-3-img: url('/imgs/under-construction.jpg');
   --proj-4-img: url('/imgs/under-construction.jpg');
   --proj-5-img: url('/imgs/under-construction.jpg');
   --proj-6-img: url('/imgs/under-construction.jpg');
+  --underconstruction-img: url('/imgs/under-construction.jpg');
 
 }
 
@@ -136,7 +137,7 @@ body:before {
 }
 
 #astronaut{
-  background-image: var(--proj-1-img);
+  background-image: var(--underconstruction-img);
   border-radius: 150px;
   margin: 200px auto;
 }
@@ -144,7 +145,6 @@ body:before {
 .project-tile{
   height: 520px;
   width: 520px;
-  background-image: url('/imgs/under-construction.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -181,39 +181,43 @@ body:before {
 #proj-5:hover .overlay-top{ height: 100%; }
 #proj-6:hover .overlay-left{ width: 100%; }
 
+#proj-1{
+  background-image: var(--proj-1-img);
+}
+
 #proj-2{
+  background-image: var(--proj-2-img);
   height: 250px;
   width: 251px;
 }
 
 #proj-3{
+  background-image: var(--proj-3-img);
   height: 250px;
   width: 450px;
-  margin: 0;
 }
 
 #proj-4{
+  background-image: var(--proj-4-img);
   height: 450px;
   width: 350px;
-  margin: 0;
 }
 
 #proj-5{
+  background-image: var(--proj-5-img);
   height: 550px;
   width: 250px;
-  margin: 0;
 }
 
 #proj-6{
+  background-image: var(--proj-6-img);
   height: 250px;
   width: 150px;
-  margin: 0;
 }
 
 .alt-tiles{
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
 }
 .grow { transition: all .2s ease-in-out; }
 
@@ -285,14 +289,16 @@ body:before {
 /* The Close Button */
 .close {
     color: #aaa;
-    float: right;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 40px;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--highlight-color);
     text-decoration: none;
     cursor: pointer;
 }
