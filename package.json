@@ -1,0 +1,22 @@
+{
+  "name": "zinoh-s-world",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredRhame/Zinoh-s-World.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Jared Rhame",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaredRhame/Zinoh-s-World/issues"
+  },
+  "homepage": "https://github.com/JaredRhame/Zinoh-s-World#readme"
+}
